@@ -37,9 +37,15 @@ Route::get('/', function () {
 // });
 
 //Praktikum 2 - Bagian 1
-Route::get('/', [PageController::class, 'index']);
+// Route::get('/', [PageController::class, 'index']);
 
-Route::get('/about', [PageController::class, 'about']);
+// Route::get('/about', [PageController::class, 'about']);
 
-Route::get('/articles/{id}', [PageController::class, 'articles']);
+// Route::get('/articles/{id}', [PageController::class, 'articles']);
 
+//Praktikum 2 - Bagian 2
+Route::get('/', [HomeController::class, 'index']);
+
+Route::get('/about', [AboutController::class, 'about']);
+
+Route::get('/articles/{id}', [ArticleController::class, 'articles']);
