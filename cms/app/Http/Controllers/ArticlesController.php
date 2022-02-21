@@ -4,9 +4,9 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 
-class ArticlesController extends Controller
-{
-    public function articles($id){
-        echo "Ini merupakan halaman artikel dengan ID ". $id;
-    }
-}
+// class ArticlesController extends Controller
+// {
+//     public function articles($id){
+//         echo "Ini merupakan halaman artikel dengan ID ". $id;
+//     }
+// }

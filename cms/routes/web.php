@@ -2,6 +2,16 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\PageController;
+use App\Http\Controllers\AboutController;
+use App\Http\Controllers\ArticleController;
+use App\Http\Controllers\HomeController;
+use App\Http\Controllers\profil\HomeController as BerandaController;
+use App\Http\Controllers\profil\ProductsController as ProductsController;
+use App\Http\Controllers\profil\NewsController as NewsController;
+use App\Http\Controllers\profil\ProgramController as ProgramController;
+use App\Http\Controllers\profil\AboutusController as AboutusController;
+
+use App\Http\Controllers\beranda\HomeController as HalamUtamaController;
 
 /*
 |--------------------------------------------------------------------------
@@ -14,13 +24,9 @@ use App\Http\Controllers\PageController;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
-
-Route::get('/', function () {
-    return view('welcome');
-});
+// Route::get('/', function () {
+//     return view('welcome');
+// });
 //Praktikum 1
 // Route::get('/', function () {
 //     echo "Selamat Datang";
@@ -44,8 +50,22 @@ Route::get('/', function () {
 // Route::get('/articles/{id}', [PageController::class, 'articles']);
 
 //Praktikum 2 - Bagian 2
-Route::get('/', [HomeController::class, 'index']);
+// Route::get('/', [HomeController::class, 'index']);
 
-Route::get('/about', [AboutController::class, 'about']);
+// Route::get('/about', [AboutController::class, 'about']);
 
-Route::get('/articles/{id}', [ArticleController::class, 'articles']);
+// Route::get('/articles/{id}', [ArticleController::class, 'articles']);
+
+//Praktikum 3
+//home
+Route::get('/',[BerandaController::class, 'index']);
+//Product
+Route::prefix('/products')->group(function(){
+    Route::get('/',[ProductsController::class, 'index']);  
+});
+//News
+Route::get('/news',[NewsController::class, 'index']);
+//Program
+Route::get('/program/{id}',[ProgramController::class, 'index']);
+//Aboutus
+Route::get('/about',[AboutusController::class, 'index']);
