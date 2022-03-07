@@ -69,3 +69,7 @@ Route::get('/news',[NewsController::class, 'index']);
 Route::get('/program/{id}',[ProgramController::class, 'index']);
 //Aboutus
 Route::get('/about',[AboutusController::class, 'index']);
+
+Auth::routes();
+
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
