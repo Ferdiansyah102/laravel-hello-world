@@ -10,7 +10,6 @@ use App\Http\Controllers\profil\ProductsController as ProductsController;
 use App\Http\Controllers\profil\NewsController as NewsController;
 use App\Http\Controllers\profil\ProgramController as ProgramController;
 use App\Http\Controllers\profil\AboutusController as AboutusController;
-
 use App\Http\Controllers\beranda\HomeController as HalamUtamaController;
 
 /*
@@ -56,20 +55,31 @@ use App\Http\Controllers\beranda\HomeController as HalamUtamaController;
 
 // Route::get('/articles/{id}', [ArticleController::class, 'articles']);
 
-//Praktikum 3
-//home
-Route::get('/',[BerandaController::class, 'index']);
-//Product
-Route::prefix('/products')->group(function(){
-    Route::get('/',[ProductsController::class, 'index']);  
+// //Praktikum 3
+// //home
+// Route::get('/',[BerandaController::class, 'index']);
+// //Product
+// Route::prefix('/products')->group(function(){
+//     Route::get('/',[ProductsController::class, 'index']);  
+// });
+// //News
+// Route::get('/news',[NewsController::class, 'index']);
+// //Program
+// Route::get('/program/{id}',[ProgramController::class, 'index']);
+// //Aboutus
+// Route::get('/about',[AboutusController::class, 'index']);
+
+// Auth::routes();
+
+// Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+
+//Pertemuan 3
+Route::get('/', function(){
+    return view('index');
 });
-//News
-Route::get('/news',[NewsController::class, 'index']);
-//Program
-Route::get('/program/{id}',[ProgramController::class, 'index']);
-//Aboutus
-Route::get('/about',[AboutusController::class, 'index']);
-
-Auth::routes();
-
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+Route::get('/contact', function(){
+    return view('contact');
+});
+Route::get('/about', function(){
+    return view('about');
+});
