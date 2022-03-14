@@ -93,10 +93,7 @@
           </div><!-- /.col-lg-4 -->
         </div><!-- /.row -->
     </div>
-    
-  
-    
-    
+
     <div class="introSection">
       <div class="container">
       <div class="row">
@@ -110,11 +107,27 @@
      <div class="container marketing">
       <h2 class="itemsTitle">Breakfast</h2>
     <div id="myCarousel1" class="carousel slide" data-ride="carousel">
+        {{-- <@foreach ($posts as $p)
+          <div class="col-lg-4">
+            <img class="img-circle" src="{{ $p -> image }}" alt="Generic placeholder image">
+            <h2>{{ $p -> name }}</h2>
+            <p>Donec sed odio dui. Etiam porta sem malesuada magna mollis euismod. Nullam id dolor id nibh ultricies</p>
+            <p><a class="btn btn-default" href="#" role="button">&pound; 2.2 Add to cart &raquo;</a></p>
+          </div><!-- /.col-lg-4 -->
+          @endforeach --}}
+
         <!-- Indicators -->
         <div class="carousel-inner">
           <div class="item active">
            <div class="row">
-          <div class="col-lg-4">
+            @foreach ($posts as $p)
+              <div class="col-lg-4">
+                <img src="{{ $p -> image }}" alt="Generic placeholder image">
+                <h4>{{ $p -> name }}</h4>
+                <p><a class="btn btn-default" href="#" role="button">Add to cart &raquo;</a></p>
+              </div><!-- /.col-lg-4 -->
+            @endforeach
+          {{-- <div class="col-lg-4">
             <img src="themes/assets/images/salate.png" alt="Generic placeholder image">
             <h4>Salates</h4>
             <p><a class="btn btn-default" href="#" role="button">Add to cart &raquo;</a></p>
@@ -129,8 +142,7 @@
             <h4>Drink</h4>
             <p><a class="btn btn-default" href="#" role="button">Add to cart &raquo;</a></p>
           </div><!-- /.col-lg-4 -->
-        </div><!-- /.row -->
-       
+        </div><!-- /.row --> 
           </div>
           <div class="item">
            <div class="row">
@@ -168,14 +180,14 @@
             <img  src="themes/assets/images/drinks.png" alt="Generic placeholder image">
             <h4>Drink</h4>
             <p><a class="btn btn-default" href="#" role="button">Add to cart &raquo;</a></p>
-          </div><!-- /.col-lg-4 -->
+          </div><!-- /.col-lg-4 --> --}}
         </div><!-- /.row -->
           </div>
         </div>
         <a class="left carousel-control" href="#myCarousel1" data-slide="prev"><span class="glyphicon glyphicon-chevron-left"></span></a>
         <a class="right carousel-control" href="#myCarousel1" data-slide="next"><span class="glyphicon glyphicon-chevron-right"></span></a>
       </div><!-- /.carousel -->
-    </div>
+    </div> --}}
     
     <div class="container marketing">
       <h2 class="itemsTitle">Lunch</h2>

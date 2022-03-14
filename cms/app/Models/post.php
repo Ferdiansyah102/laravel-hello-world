@@ -7,7 +7,7 @@ use Illuminate\Database\Eloquent\Model;
 
 class post extends Model
 {
-    protected $table = 'posts';
+    protected $table = 'post';
     protected $primaryKey = 'id';
     protected $KeyType = 'String';
     public $incrementing = false;  

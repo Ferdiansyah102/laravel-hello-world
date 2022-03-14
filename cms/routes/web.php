@@ -73,13 +73,16 @@ use App\Http\Controllers\beranda\HomeController as HalamUtamaController;
 
 // Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
-//Pertemuan 3
-Route::get('/', function(){
-    return view('index');
-});
-Route::get('/contact', function(){
-    return view('contact');
-});
-Route::get('/about', function(){
-    return view('about');
-});
+// //Pertemuan 3
+// Route::get('/', function(){
+//     return view('index');
+// });
+// Route::get('/contact', function(){
+//     return view('contact');
+// });
+// Route::get('/about', function(){
+//     return view('about');
+// });
+
+//Pertemuan 4 
+Route::get('/', [App\Http\Controllers\post\HomeController::class, 'index'])->name('home');
