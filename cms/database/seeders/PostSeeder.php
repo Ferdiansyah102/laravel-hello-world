@@ -13,7 +13,7 @@ class PostSeeder extends Seeder
      */
     public function run()
     {
-        $post = 
+        $posts = 
         [
             [
                 'name'=>'burger',
