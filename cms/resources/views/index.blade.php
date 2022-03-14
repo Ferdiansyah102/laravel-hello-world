@@ -106,14 +106,7 @@
       </div>
       </div>
     </div>
-    
-    
-    
-    
-    
-    
-    
-    
+
      <div class="container marketing">
       <h2 class="itemsTitle">Breakfast</h2>
     <div id="myCarousel1" class="carousel slide" data-ride="carousel">
