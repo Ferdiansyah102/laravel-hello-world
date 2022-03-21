@@ -69,7 +69,7 @@ use App\Http\Controllers\beranda\HomeController as HalamUtamaController;
 // //Aboutus
 // Route::get('/about',[AboutusController::class, 'index']);
 
-// Auth::routes();
+Auth::routes();
 
 // Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
