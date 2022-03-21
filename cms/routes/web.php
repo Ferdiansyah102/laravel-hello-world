@@ -85,4 +85,7 @@ Auth::routes();
 // });
 
 //Pertemuan 4 
-Route::get('/', [App\Http\Controllers\post\HomeController::class, 'index'])->name('home');
+// Route::get('/', [App\Http\Controllers\post\HomeController::class, 'index'])->name('home');
+Route::get('home', function(){
+    return view('home');
+});
