@@ -47,7 +47,7 @@
                 <li><a href="about">About Us</a></li>
                 <li><a href="contact">Contact</a></li>
                 <li><a href="#tablebooking">Table Booking</a></li>
-				<li class="dropdown">
+				        <li class="dropdown">
                   <a href="#" class="dropdown-toggle" data-toggle="dropdown">Indina <b class="caret"></b></a>
                   <ul class="dropdown-menu">
                     <li><a href="#">DRINKS</a></li>
@@ -62,7 +62,7 @@
                   </ul>
                 </li>
 				
-				<li class="dropdown">
+				        <li class="dropdown">
                   <a href="#" class="dropdown-toggle" data-toggle="dropdown">Italian <b class="caret"></b></a>
                   <ul class="dropdown-menu">
                     <li><a href="#">DRINKS</a></li>
@@ -91,6 +91,7 @@
                     <li><a href="#">ACCOMPANIMENTS</a></li>
                   </ul>
                 </li>
+                <li><a href="login">Login</a></li>
               </ul>
             </div>
           </div>

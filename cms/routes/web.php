@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use Illuminate\Support\Facades\Auth;
 use App\Http\Controllers\PageController;
 use App\Http\Controllers\AboutController;
 use App\Http\Controllers\ArticleController;
@@ -69,7 +70,7 @@ use App\Http\Controllers\beranda\HomeController as HalamUtamaController;
 // //Aboutus
 // Route::get('/about',[AboutusController::class, 'index']);
 
-Auth::routes();
+// Auth::routes();
 
 // Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
@@ -86,6 +87,20 @@ Auth::routes();
 
 //Pertemuan 4 
 // Route::get('/', [App\Http\Controllers\post\HomeController::class, 'index'])->name('home');
-Route::get('home', function(){
-    return view('home');
+// Route::get('/home', function(){
+//     return view('home');
+// });
+
+//Pertemuan 6
+Auth::routes();
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+
+
+Route::get('/', [App\Http\Controllers\post\HomeController::class, 'index']);
+Route::get('/contact', function(){
+    return view('contact');
 });
+Route::get('/about', function(){
+    return view('about');
+});
+
