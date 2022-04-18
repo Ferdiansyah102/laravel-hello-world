@@ -104,3 +104,5 @@ Route::get('/about', function(){
     return view('about');
 });
 
+Route::resource('articles', ArticleController::class);
+
